@@ -1,0 +1,112 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Elemento</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row">1</th>
+        <td> {{ nombre }} </td>
+        <td> uppercase </td>
+        <td> {{ nombre | uppercase }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td> {{ nombre }} </td>
+        <td> lowercase </td>
+        <td> {{ nombre | lowercase }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">3</th>
+        <td> {{ nombre }} </td>
+        <td> <b>slice:4</b> corta desde la posición  </td>
+        <td> {{ nombre | slice:4 }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">4</th>
+        <td> {{ nombre }} </td>
+        <td> <b>slice:0:4</b> conrta entre el rango de posiciones 0 y 4.  </td>
+        <td> {{ nombre | slice:0:4 }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">5</th>
+        <td> PI </td>
+        <td> <b>number:</b> redondeo por defecto </td>
+        <td> {{ PI | number }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">6</th>
+        <td> PI </td>
+        <td> <b>number:'1.0-0'</b> solo un número entero </td>
+        <td> {{ PI | number:'1.0-0' }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">7</th>
+        <td> PI </td>
+        <td> <b>number:'1.0-0'</b> todos los numeros enteros y dos decimales. </td>
+        <td> {{ PI | number:'.0-2' }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">8</th>
+        <td> Porcentaje </td>
+        <td> <b>percent:</b> nos da el porcentaje. </td>
+        <td> {{ porcentaje | percent }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">9</th>
+        <td> Porcentaje </td>
+        <td> <b>percent:'2.2-2'</b> nos da dos numeros enteros y dos decimales,se dedondea el número final</td>
+        <td> {{ porcentaje | percent:'2.2-2' }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">10</th>
+        <td> Pipe asincrono </td>
+        <td> <b>async</b> espera a que la respuesta re resuelva</td>
+        <td> {{ promesa | async }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">11</th>
+        <td> Fecha </td>
+        <td> <b>date</b> </td>
+        <td> {{ date | date }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">12</th>
+        <td> Fecha </td>
+        <td> <b>date</b> se muestra con una configuracion predeterminada </td>
+        <td> {{ date | date:'medium' }} </td>
+      </tr>
+
+      <tr>
+        <th scope="row">12</th>
+        <td> Fecha </td>
+        <td> <b>date</b> se muestra con una configuracion personalizada </td>
+        <td> {{ date | date:'MMMM - dd' }} </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+  <h3>Json</h3>
+  <pre>
+    {{ heroe | json }}
+  </pre>
+
+  <app-pipes-personalizados></app-pipes-personalizados>

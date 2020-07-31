@@ -1,0 +1,42 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Elemento</th>
+            <th scope="col">Pipe</th>
+            <th scope="col">Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>allCapitalizar</td>
+            <td><b>allCapital</b> capitaliza cada letra inicial de un String. </td>
+            <td> {{ cadena | allCapitalizar }} </td>
+        </tr>
+
+        <tr>
+            <th scope="row">1</th>
+            <td>allCapitalizar</td>
+            <td><b>allCapital</b> capitaliza cada letra inicial de un String. </td>
+            <td> {{ cadena | allCapitalizar:false }} </td>
+        </tr>
+
+        <tr>
+            <th scope="row">4</th>
+            <td>contrasenia</td>
+            <td><b>contrasenia</b> oculta los caracteres de la contrasenia
+                <button type="button" class="btn btn-primary" (click)="estadoContrasenia = !estadoContrasenia" >ver</button>
+            </td>
+            <td> {{ cadena | contrasenia:estadoContrasenia }} </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h3>Video de Confianza</h3>
+<div class="container">
+    <iframe width="560" height="315" [src]="urlVideo | domSeguro" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+</div>

@@ -1,0 +1,18 @@
+<div class="container mt-3 mb-5">
+    <div class="card" style="width: 30rem;">
+
+        <div class="card-header" >
+            Creado por {{ heroe.casa | uppercase }}.
+        </div>
+
+        <img [src]=" heroe.img " style="height: 20rem;" class="card-img-top" [alt]="heroe.nombre">
+
+        <div class="card-body">
+            <h5 class="card-title"> {{ heroe.nombre | uppercase  }} </h5>
+            <p class="card-text"> {{ heroe.bio }} </p>
+            <p class="card-text"><small class="text-muted"> {{ heroe.aparicion | date:'y'}} </small></p>
+            <a [routerLink]="['/heroes']" class="btn btn-primary"> Atrás </a>
+        </div>
+
+    </div>
+</div>
